@@ -1,0 +1,2 @@
+generator: generator.cpp graph_generator.cpp
+	g++ generator.cpp graph_generator.cpp -o generator
