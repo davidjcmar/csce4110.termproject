@@ -5,6 +5,7 @@
 #include <sys/resource.h>
 #include <sys/times.h>
 #include <time.h>
+#include <iomanip>
 using namespace std;
 
 int main (int argc, char* argv[])
@@ -84,7 +85,7 @@ int main (int argc, char* argv[])
 //				cout<<"Dijkstra time: "<<elapse_time<<"\n"; //testing
 //				dij->print(); //testing
 				dij->to_file(&out_file_dij); // write minimized graph to file
-				out_file_times<<size<<"\t\t\t"<<elapse_time<<"\t\t";
+				out_file_times<<size<<"\t\t\t"<<setprecision(10)<<elapse_time<<"\t\t";
 				dij->~dijkstra();
 			}
 			else
@@ -104,7 +105,7 @@ int main (int argc, char* argv[])
 //				cout<<"Floyd-Warshal time: "<<elapse_time<<"\n"; //testing
 //				fl_w->print(); //testing
 				fl_w->to_file(&out_file_floyd);
-				out_file_times<<elapse_time<<"\n";
+				out_file_times<<setprecision(10)<<elapse_time<<"\n";
 				fl_w->~floyd_w();
 			}
 			else
