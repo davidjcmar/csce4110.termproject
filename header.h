@@ -1,3 +1,8 @@
+/*
+Main Header
+David Cmar
+November, 2015
+*/
 #ifndef __header__
 #define __header__
 

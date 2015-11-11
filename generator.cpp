@@ -1,3 +1,8 @@
+/*
+Generator Class Methods
+David Cmar
+November, 2015
+*/
 #include "graph_generator.h"
 using namespace std;
 
@@ -32,8 +37,9 @@ void generator::populate(int size)
         }
     }
 }
-/* print matrix
-strictly for testing */
+/*  print matrix
+        for testing
+*/
 void generator::print()
 {
     for (int i=0; i<size; i++)
@@ -44,12 +50,12 @@ void generator::print()
     }
 
 }
-/* output matrix to file in form:
-size
-[1st row]
-[2nd row]
-...
-[nth row]
+/*  output matrix to file in form:
+        size
+        [1st row]
+        [2nd row]
+        ...
+        [nth row]
 */
 void generator::to_file(ofstream* out_file)
 {

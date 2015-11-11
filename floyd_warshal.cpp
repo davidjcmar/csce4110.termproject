@@ -1,3 +1,8 @@
+/*
+Floyd-Warshall Class Methods
+David Cmar
+November, 2015
+*/
 #include "header.h"
 #include "floyd_warshal.h"
 using namespace std;

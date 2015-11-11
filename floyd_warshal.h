@@ -1,3 +1,8 @@
+/*
+Floyd-Warshall Header
+David Cmar
+November, 2015
+*/
 #ifndef __FLOYD_W__
 #define __FLOYD_W__
 #include <fstream>

@@ -1,3 +1,8 @@
+/* 
+Dijkstra Header
+David Cmar
+November, 2015
+*/
 #ifndef __DIJKSTRA__
 #define __DIJKSTRA__
 #include <vector>

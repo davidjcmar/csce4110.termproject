@@ -1,3 +1,10 @@
+/*
+Main Program
+David Cmar
+November, 2015
+**************
+Call algorithm methods, handle file descriptors, handle timing
+*/
 #include "dijkstra.h"
 #include "floyd_warshal.h"
 #include "header.h"

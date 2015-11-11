@@ -1,3 +1,8 @@
+/*
+Dijkstra Class Methods
+David Cmar
+November, 2015
+*/
 #include "header.h"
 #include "dijkstra.h"
 #include <unistd.h>
