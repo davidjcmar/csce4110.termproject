@@ -57,10 +57,10 @@ void dijkstra::run(int start, int** matrix)
 	/* end testing */
 	while (!q.empty())
 	{
-		//class id_val_pair u = q.top(); // yoooooo
-		//q.pop(); // yoooooo
-        class id_val_pair u = q.front();
-        q.pop();
+		class id_val_pair u = q.top(); // yoooooo
+		q.pop(); // yoooooo
+        //class id_val_pair u = q.front();
+        //q.pop();
 
 		for (int i=0; i<size; i++)
 		{
