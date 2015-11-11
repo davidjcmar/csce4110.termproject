@@ -8,11 +8,13 @@ November, 2015
 #include <unistd.h>
 using namespace std;
 
+/* structure id/ edge value tuple */
 id_val_pair::id_val_pair(int id_init, int val_init)
 {
 	id = id_init;
 	value = val_init;
 }
+
 dijkstra::dijkstra(int size_init)
 {
 	/* init structures */
@@ -20,7 +22,6 @@ dijkstra::dijkstra(int size_init)
 	graph = new int*[size];
 	for (int i=0; i<size; i++)
 		graph[i] = new int[size];
-//	queue = new int[size];
 	prev = new int*[size];
 	for (int i=0; i<size; i++)
 		prev[i] = new int[size];
@@ -28,8 +29,6 @@ dijkstra::dijkstra(int size_init)
 	for (int i=0; i<size; i++)
 		for (int j=0; j<size; j++)
 			graph[i][j] = GRAPH_MAX;
-/*	for (int i=0; i<size; i++)
-		queue[i] = -1;*/
 	for (int i=0; i<size; i++)
 		for(int j=0; j<size; j++)
 			prev[i][j] = -1;
@@ -41,7 +40,9 @@ dijkstra::~dijkstra()
 		delete graph[i];
 	delete graph;
 }
-
+/*  run algorithm 
+        input: start vertex, adjacency matrix
+*/
 void dijkstra::run(int start, int** matrix)
 {
 	class id_val_pair* v;
@@ -62,11 +63,9 @@ void dijkstra::run(int start, int** matrix)
 	/* end testing */
 	while (!q.empty())
 	{
-		//class id_val_pair u = q.top(); // yoooooo
-		//q.pop(); // yoooooo
-        class id_val_pair u = q.front();
-        q.pop();
-
+		class id_val_pair u = q.top();
+		q.pop(); // yoooooo
+        
 		for (int i=0; i<size; i++)
 		{
 //			cout<<"u: "<<u.value<<" current: "<<matrix[start][u.id]<<"\n"; //testing
@@ -91,7 +90,9 @@ void dijkstra::run(int start, int** matrix)
 	/* end testing */
 
 }
-
+/*  print adjacency matrix
+        for testing
+*/
 void dijkstra::print()
 {
 	for (int i=0; i<size; i++)
@@ -101,7 +102,7 @@ void dijkstra::print()
 		cout<<"\n";
 	}
 }
-
+/* output adjacency matrix to file */
 void dijkstra::to_file(ofstream* out_file)
 {
 	*out_file<<size<<"\n";

@@ -19,19 +19,20 @@ int main (int argc, char* argv[])
 {
 	if (argc != 2)
 	{
-		cout<<"Include one file containing one or more adjacnecy matrix as an argument.\n";
+		cout<<"Include one file containing one or more adjacency matrix as an argument.\n";
 		return 1;
 	}
+	/* file descriptors */
 	ifstream in_file;
 	ofstream out_file_dij;
 	ofstream out_file_floyd;
 	ofstream out_file_times;
 
-	in_file.open(argv[1]);
+	in_file.open(argv[1]); // open input file descriptor
 	if (in_file.is_open())
 	{
 		string line;
-		/* open output files */
+		/* open output file descriptors */
 		out_file_times.open("time_comparison");
 		out_file_dij.open("dijkstra_paths");
 		out_file_floyd.open("floyd_paths");

@@ -28,7 +28,7 @@ floyd_w::~floyd_w()
 		delete graph[i];
 	delete graph;
 }
-
+/* 	run algorithm */
 int floyd_w::run()
 {
 	for (int k=0; k<size; k++)
@@ -44,7 +44,9 @@ int floyd_w::run()
 		}
 	}
 }
-
+/* 	print adjacency matrix
+		for testing
+*/
 void floyd_w::print()
 {
 	for (int i=0; i<size; i++)
@@ -54,7 +56,7 @@ void floyd_w::print()
 		cout<<"\n";
 	}
 }
-
+/* output adjacency matrix to file */
 void floyd_w::to_file(ofstream* out_file)
 {
 	*out_file<<size<<"\n";

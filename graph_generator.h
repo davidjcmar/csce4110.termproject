@@ -3,8 +3,8 @@ Graph Generator Header
 David Cmar
 November, 2015
 */
-#ifndef __header__
-#define __header__
+#ifndef __GRAPH_GEN__
+#define __GRAPH_GEN__
 
 #include <iostream>
 #include <fstream>

@@ -32,8 +32,7 @@ class dijkstra{
 		int** graph;
 		int** prev;
 		int size;
-		//priority_queue<id_val_pair, vector<id_val_pair>, compare_val >q;
-		queue<id_val_pair> q;
+		priority_queue<id_val_pair, vector<id_val_pair>, compare_val >q;
 	public:
 		dijkstra(int size);
 		~dijkstra();
