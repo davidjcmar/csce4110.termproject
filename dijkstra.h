@@ -7,7 +7,7 @@
 #define GRAPH_MAX 101 // maximum value in graph + 1
 using namespace std;
 
-/* id value pair for priority queue */
+/* id value pair for queue */
 class id_val_pair{
 	public:
 		int id;
@@ -28,7 +28,8 @@ class dijkstra{
 		int** prev;
 		int size;
 		//priority_queue<int, vector<int>, greater<int> >q;
-		priority_queue<id_val_pair, vector<id_val_pair>, compare_val >q;
+		//priority_queue<id_val_pair, vector<id_val_pair>, compare_val >q;
+		queue<id_val_pair> q;
 	public:
 		dijkstra(int size);
 		~dijkstra();
